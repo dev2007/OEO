@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.awu.models">
+<class name="User" table="user">
+	<id name="userid" type="string">
+	</id>
+	<property name="username" type="string"></property>
+	<property name="pwd" type="string"></property>
+	<property name="creator" type="string"></property>
+	<property name="createtime" type="date"></property>
+	<property name="updater" type="string"></property>
+	<property name="updatetime" type="date"></property>
+	<property name="isenabled" type="int"></property>
+</class>
+</hibernate-mapping>
