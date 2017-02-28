@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Struts</title>
+<title>首页</title>
 </head>
 <body>
-struts
+首页页面
+<a href="search">跳转</a>
 </body>
 </html>

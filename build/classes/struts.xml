@@ -3,9 +3,14 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
+	<constant name="struts.objectFactory" value="spring" />
 	<package name="default" namespace="/" extends="struts-default">
-		<action name="home" class="com.awu.actions.HomeAction">
-			<result>/WEB-INF/result.jsp</result>
+		<default-action-ref name="index"></default-action-ref>
+		<action name="index" class="homeAction">
+			<result>/WEB-INF/views/index.jsp</result>
+		</action>
+		<action name="search" class="searchAction">
+			<result>/WEB-INF/views/result.jsp</result>
 		</action>
 	</package>
 </struts>

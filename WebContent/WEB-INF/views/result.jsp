@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>首页</title>
+<title>Search</title>
 </head>
 <body>
-首页页面
+search
 </body>
 </html>
