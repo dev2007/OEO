@@ -1,19 +1,23 @@
-package com.awu.actions;
+package com.awu.controllers;
 
 import java.util.ArrayList;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.awu.models.User;
-import com.opensymphony.xwork2.ActionSupport;
 
-public class SearchAction extends ActionSupport {
-	public String execute(){
+@Controller
+@RequestMapping("/search")
+public class SearchController {
+	@RequestMapping("/index")
+	public String search(){
 		System.out.println("Search");
 		getData();
-		return SUCCESS;
+		return "result";
 	}
 	
 	private void getData(){

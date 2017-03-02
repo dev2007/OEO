@@ -8,6 +8,6 @@
 </head>
 <body>
 首页页面
-<a href="search">跳转</a>
+<a href="search/index">跳转</a>
 </body>
 </html>
