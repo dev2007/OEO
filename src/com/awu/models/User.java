@@ -3,60 +3,46 @@ package com.awu.models;
 import java.util.Date;
 
 public class User {
-	private String userid;
-	private String username;
-	private String pwd;
-	private String creator;
-	private Date createtime;
-	private String updater;
-	private Date updatetime;
-	private int isenabled;
-	public String getUserid() {
-		return userid;
+	private String id;
+	private String name;
+	private String password;
+	private Date createDate;
+	private Date updateDate;
+	private boolean enabled;
+	public String getId() {
+		return id;
 	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getPwd() {
-		return pwd;
+	public String getPassword() {
+		return password;
 	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	public String getCreator() {
-		return creator;
+	public Date getCreateDate() {
+		return createDate;
 	}
-	public void setCreator(String creator) {
-		this.creator = creator;
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
 	}
-	public Date getCreatetime() {
-		return createtime;
+	public Date getUpdateDate() {
+		return updateDate;
 	}
-	public void setCreatetime(Date createtime) {
-		this.createtime = createtime;
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
 	}
-	public String getUpdater() {
-		return updater;
+	public boolean getEnabled() {
+		return enabled;
 	}
-	public void setUpdater(String updater) {
-		this.updater = updater;
-	}
-	public Date getUpdatetime() {
-		return updatetime;
-	}
-	public void setUpdatetime(Date updatetime) {
-		this.updatetime = updatetime;
-	}
-	public int getIsenabled() {
-		return isenabled;
-	}
-	public void setIsenabled(int isenabled) {
-		this.isenabled = isenabled;
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 }

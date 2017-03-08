@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.awu.models.User;
+import com.sun.org.apache.bcel.internal.generic.NEW;
 
 @Controller
 @RequestMapping("/search")
@@ -26,10 +27,18 @@ public class SearchController {
 		Session session = null;
 		try{
 			session = factory.openSession();
+//			session.beginTransaction();
+			ArrayList<User> result = (ArrayList<User>) session.createQuery("from User").list();
+//			User user =  new User();
+//			user.setName("123");
+//			session.save(user);
+//			session.getTransaction().commit();
+			
 			session.beginTransaction();
-//			ArrayList<User> result = (ArrayList<User>) session.createQuery("from User").list();
 			session.createQuery("from User").uniqueResult();
-			System.out.println(session.get(User.class,"402895da5a6def38015a6def39d80000").getUsername());
+			User user = session.get(User.class,"402895da5a6def38015a6def39d80000");
+			System.out.println(user.getName());
+			System.out.println(user.getEnabled());
 			
 			session.getTransaction().commit();
 		}catch (Exception e) {

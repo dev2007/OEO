@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hibernate-mapping package="com.awu.models">
-<class name="User" table="user">
-	<id name="userid" type="string">
-	</id>
-	<property name="username" type="string"></property>
-	<property name="pwd" type="string"></property>
-	<property name="creator" type="string"></property>
-	<property name="createtime" type="date"></property>
-	<property name="updater" type="string"></property>
-	<property name="updatetime" type="date"></property>
-	<property name="isenabled" type="int"></property>
-</class>
+	<class name="User" table="user">
+		<id name="id" type="string">
+			<generator class="uuid"></generator>
+		</id>
+		<property name="name" type="string"></property>
+		<property name="password" type="string"></property>
+		<property name="createDate" column="create_date" type="date"></property>
+		<property name="updateDate" column="update_date" type="date"></property>
+		<property name="enabled" column="enabled" type="boolean"></property>
+	</class>
 </hibernate-mapping>
