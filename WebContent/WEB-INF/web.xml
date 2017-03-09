@@ -51,6 +51,6 @@
 	</listener>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:springmvc.xml</param-value>
+		<param-value></param-value>
 	</context-param>
 </web-app>
